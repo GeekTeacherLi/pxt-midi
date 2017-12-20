@@ -271,7 +271,7 @@ namespace midi {
         //% fn.min=0 fn.max=119
         //% value.min=0 value.max=127
         controlChange(fn: number, value: number) {
-            sendMessage([0xb0 | this.channel, fn & 0xf, value & 0xf]);
+            sendMessage([0xb0 | this.channel, fn & 0xf, value & 0x7f]);
         }
 
         /**
