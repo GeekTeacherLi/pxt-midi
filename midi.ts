@@ -265,12 +265,12 @@ namespace midi {
          * @param controller the controller number
          * @param value the value
          */
-        //% blockId=midi_control_change block="%this|control change %key to %pressure"
+        //% blockId=midi_control_change block="%this|my control change %key to %pressure"
         //% blockGap=8
         //% subcategory="Channels"
         //% fn.min=0 fn.max=119
         //% value.min=0 value.max=127
-        controlChange(fn: number, value: number) {
+        mycontrolChange(fn: number, value: number) {
             sendMessage([0xb0 | this.channel, fn & 0xf, value & 0x7f]);
         }
 
